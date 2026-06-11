@@ -178,8 +178,8 @@
           },
           onClose: function (selectedDates, dateStr, instance) {
             self.$nextTick(function () { // wait for the datepicker to properly update the UI
-              self.$emit('input', self.date)
-              self.$emit('close', self.date)
+              self.$emit('input', dateStr)
+              self.$emit('close', dateStr)
 
               // see formStore mixin
               self.saveIntoStore()
